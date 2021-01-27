@@ -1,5 +1,7 @@
 package com.back.emoyogiyo.user;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,5 +31,16 @@ public class UserController {
 	@PostMapping("/login")
 	public void loginProc() {
 		
+	}
+	
+	@GetMapping("/join")
+	public String join() {
+		return "/user/join";
+	}
+	
+	@PostMapping("/join")
+	public String join(UserEntity param) {
+		service.insUser(param);
+		return "redirect:/user/login";	
 	}
 }
