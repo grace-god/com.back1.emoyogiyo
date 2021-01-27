@@ -17,6 +17,8 @@ public class SimpleUserEntity {
 	protected String birthday;
 	protected String make_date;
 	protected String profile_uuid_nm;
+	protected String ph_num;
+
 	
 	
 	

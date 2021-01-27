@@ -33,4 +33,13 @@ public class UserService {
 		session.setAttribute("user",Utils.ParsingUserEntity(dbdata));
 		return 3;
 	}
+	
+	public void insUser(UserEntity param) {
+		String salt = Utils.gensalt();
+		String secertpassword = Utils.hashPassword(param.getUser_pw(), salt);
+		param.setUser_pw(secertpassword);
+		param.setSalt(salt);
+		mapper.insUser(param);
+
+	}
 }

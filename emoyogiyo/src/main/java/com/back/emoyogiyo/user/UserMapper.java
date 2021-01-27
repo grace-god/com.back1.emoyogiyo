@@ -12,4 +12,6 @@ import com.back.emoyogiyo.model.UserEntity;
 public interface UserMapper {
 	List<UserEntity> userList();
 	UserEntity userlogin(UserEntity param);
+	void insUser(UserEntity param);
+
 }

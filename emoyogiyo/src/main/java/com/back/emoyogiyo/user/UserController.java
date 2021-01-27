@@ -1,6 +1,10 @@
 package com.back.emoyogiyo.user;
 
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
+=======
+import javax.servlet.http.HttpServletRequest;
+>>>>>>> branch 'master' of https://github.com/yim0321/com.back1.emoyogiyo.git
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -47,4 +51,11 @@ public class UserController {
 	
 	@GetMapping("/join")
 	public void join(Model model) {}
+
+	@PostMapping("/join")
+	public String join(UserEntity param) {
+		service.insUser(param);
+		return "redirect:/user/login";	
+	}
+
 }

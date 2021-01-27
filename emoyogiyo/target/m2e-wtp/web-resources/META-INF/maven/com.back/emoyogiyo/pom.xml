@@ -155,12 +155,20 @@
 		    <scope>provided</scope>
 		</dependency>
 		<!-- 암호화-->
+<<<<<<< HEAD
 		<dependency>
 		    <groupId>org.mindrot</groupId>
 		    <artifactId>jbcrypt</artifactId>
 		    <version>0.4</version>
 		</dependency>
 		
+=======
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+>>>>>>> branch 'master' of https://github.com/yim0321/com.back1.emoyogiyo.git
 		
 		    
 	</dependencies>

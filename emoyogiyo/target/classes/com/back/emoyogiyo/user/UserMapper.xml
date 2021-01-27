@@ -4,4 +4,15 @@
 	<select id="userlogin" resultType="UserEntity">
 		SELECT * FROM e_user WHERE user_id = #{user_id}
 	</select>
+	
+	<insert id="insUser">
+		INSERT INTO e_user
+		(
+			store_num, user_id, user_pw, salt, user_nm, gender, birthday, ph_num
+		)
+		VALUES
+		(
+			#{store_num}, #{user_id}, #{user_pw}, #{salt}, #{user_nm}, #{gender}, #{birthday}, #{ph_num}
+		)
+	</insert>
 </mapper>  
