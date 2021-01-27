@@ -19,15 +19,16 @@
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="prefix" value="/WEB-INF/views" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
+	
 	
 	<beans:bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
 		<beans:property name="jdbcUrl" value="jdbc:mysql://localhost/emo?serverTimezone=UTC"/>
 		<beans:property name="username" value="root"/>
-		<beans:property name="password" value="123123"/>
+		<beans:property name="password" value="koreait2020"/>
 	</beans:bean>
 	
 	<beans:bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
