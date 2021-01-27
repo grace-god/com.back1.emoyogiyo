@@ -1,19 +1,13 @@
 package com.back.emoyogiyo.user;
 
-<<<<<<< HEAD
-import javax.servlet.http.HttpSession;
-=======
-import javax.servlet.http.HttpServletRequest;
->>>>>>> branch 'master' of https://github.com/yim0321/com.back1.emoyogiyo.git
 
+import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.back.emoyogiyo.common.Utils;
 import com.back.emoyogiyo.model.UserEntity;
 
 
