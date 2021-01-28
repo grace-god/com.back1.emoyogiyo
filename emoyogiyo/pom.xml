@@ -147,7 +147,7 @@
 		    <artifactId>HikariCP</artifactId>
 		    <version>3.4.5</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<!-- 롬북 -->
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
@@ -155,12 +155,13 @@
 		    <scope>provided</scope>
 		</dependency>
 		<!-- 암호화-->
-        <dependency>
-            <groupId>org.mindrot</groupId>
-            <artifactId>jbcrypt</artifactId>
-            <version>0.4</version>
-        </dependency>
+		<dependency>
+		    <groupId>org.mindrot</groupId>
+		    <artifactId>jbcrypt</artifactId>
+		    <version>0.4</version>
+		</dependency>
 		
+
 		    
 	</dependencies>
     <build>
