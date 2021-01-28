@@ -5,6 +5,12 @@
 		SELECT * FROM e_user WHERE user_id = #{user_id}
 	</select>
 	
+	<select id="idChk" resultType="boolean">
+		SELECT IFNULL(MAX(TRUE), FALSE)
+		FROM e_user
+		WHERE user_id = #{user_id}
+	</select>
+	
 	<insert id="insUser">
 		INSERT INTO e_user
 		(

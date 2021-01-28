@@ -1,6 +1,9 @@
 package com.back.emoyogiyo.user;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.back.emoyogiyo.model.UserEntity;
 
 
@@ -50,6 +55,14 @@ public class UserController {
 	public String join(UserEntity param) {
 		service.insUser(param);
 		return "redirect:/user/login";	
+	}
+	
+	@ResponseBody
+	@GetMapping("/idChk/{user_id}")
+	public Map<String, Boolean> idChk(UserEntity param){
+		Map<String, Boolean> map = new HashMap<String, Boolean>();
+		map.put("idChk", service.idChk(param));
+		return map;
 	}
 
 }

@@ -42,4 +42,8 @@ public class UserService {
 		mapper.insUser(param);
 
 	}
+	
+	public boolean idChk(UserEntity param) {		
+		return mapper.idChk(param);
+	}
 }
