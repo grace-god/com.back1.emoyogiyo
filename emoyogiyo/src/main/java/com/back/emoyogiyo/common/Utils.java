@@ -9,6 +9,7 @@ public class Utils {
 
 	
 	public static SimpleUserEntity ParsingUserEntity(UserEntity entity) {
+
 		return new SimpleUserEntity(entity.getI_user(),entity.getStore_num(),entity.getUser_nm(),entity.getGender(),entity.getBirthday(),entity.getMake_date(),entity.getProfile_uuid_nm(),entity.getPh_num());
 	}
 
