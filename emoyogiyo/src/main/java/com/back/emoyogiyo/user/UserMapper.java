@@ -13,5 +13,5 @@ public interface UserMapper {
 	List<UserEntity> userList();
 	UserEntity userlogin(UserEntity param);
 	void insUser(UserEntity param);
-
+	boolean idChk(UserEntity param);
 }

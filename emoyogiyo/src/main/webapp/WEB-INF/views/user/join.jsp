@@ -1,8 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
+
 <html>
 <head>
+<script defer src="/res/js/user.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -72,8 +75,8 @@
                 <tr>
                     <td>아이디<span class="star">*</span></td>
                     <td>
-                        <input type="text" name="user_id" placeholder="아이디">
-                        <input type="button" value="아이디 중복확인">
+                        <input type="text" id="user_id" name="user_id" placeholder="아이디">
+                        <input type="button" value="아이디 중복확인" onclick="idChk()">
                         (영문 소문자/숫자,4~16자)
                     </td>
                 </tr>
