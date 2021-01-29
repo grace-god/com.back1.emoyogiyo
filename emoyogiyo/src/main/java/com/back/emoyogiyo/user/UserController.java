@@ -36,7 +36,7 @@ public class UserController {
 				
 		switch (result) {
 		case 3:
-			return "user/test";
+			return "board/list";
 		case 1:
 			msg ="아이디가 틀렸습니다.";	
 			break;
