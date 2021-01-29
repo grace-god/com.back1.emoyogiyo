@@ -5,67 +5,11 @@
 
 <html>
 <head>
-<script defer src="/res/js/user.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color: cornflowerblue;
-        }
-        .title_join{
-            text-align: center;
-            color: white;
-            font-size: 50px;
-            font-weight: 500;
-            margin: 30px;
-        }
-        .join{
-            position: absolute;
-            top: 40%; left: 50%;
-            transform: translate(-50%,-50%);
-        }
-        .join_box{
-            width: 680px;
-            background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-        }
-        table{
-            border-collapse: separate;
-            border-spacing: 0 30px;
-            color: cornflowerblue;
-        }
-        .star{
-            color: red;
-        }
-        .join_box input[type=text],[type=password]{
-            border: none;
-            border-bottom: 1px solid grey;
-        }
-        .join_box input[type=text]:focus,[type=password]:focus {
-            outline:2px solid cornflowerblue;
-        }
-        .join_box input[type=submit],[type=button] {
-            background-color: cornflowerblue;
-            border: none;
-            border-radius: 20px;
-            color: white;
-            height: 30px;
-        }
-        .join_box input[type=submit]:hover,[type=button]:hover {
-            color: turquoise;
-        }
-        .join_box input[type=submit]{
-            width: 200px;
-            height: 40px;
-            font-size: 20px;
-        }
-        .join_submit{
-            text-align: center;
-        }
-
-    </style>
+	<link rel="stylesheet" href="/css/join.css">
+	<script defer src="/js/user.js"></script>
 </head>
 <body>
     <div class="join">
