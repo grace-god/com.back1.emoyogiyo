@@ -1,5 +1,7 @@
 package com.back.emoyogiyo.model;
 
+import org.apache.ibatis.type.Alias;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor 
 @AllArgsConstructor
-
-
+@Alias("SimpleUserEntity")
 public class SimpleUserEntity {
 	protected int i_user;
 	protected int store_num;
