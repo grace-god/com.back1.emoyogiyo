@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.back.emoyogiyo.board.BoardMapper">
+	<select id="selMenuList" resultType="MenuDomain">
+		SELECT A.i_menu, A.menu_nm, A.menu_img, A.r_dt, A.price
+			, B.i_store
+			FROM e_menu A
+			LEFT JOIN e_store B
+			ON A.i_store = B.i_store
+			WHERE A.i_store = #{i_store};
+	</select>
+</mapper> 

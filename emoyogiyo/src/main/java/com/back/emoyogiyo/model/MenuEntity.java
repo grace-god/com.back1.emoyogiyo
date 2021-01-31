@@ -10,8 +10,9 @@ public class MenuEntity {
 	private int i_menu;
 	private int i_store;
 	private int seq;
-	private String manu_nm;
-	private String manu_img;
+	private String menu_nm;
+	private String menu_img;
 	private String r_dt;
 	private int i_user;
+	private int price;
 }

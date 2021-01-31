@@ -1,14 +1,48 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
-<div id="centerContainer">		
-	<div>
-		<form action="/user/login" method="post">
-			<div><input type="text" name="user_id" placeholder="id" value="yim" required></div>
-			<div><input type="password" name="user_pw" placeholder="password" value="123123" required></div>
-			<div><input type="submit" value="LOGIN"></div>
-		</form>
-		<div style="color:red;">${msg}</div>
-		<a href="/user/join">join</a>
-	</div>		
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="login">
+        <div class="title_login">로그인</div>
+        <form action="/user/login" method="post">
+            <table class="login_box">
+                <tr>
+                    <td>
+                        <input type="text" name="user_id" placeholder="아이디">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" name="user_pw" placeholder="비밀번호">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input width="100%" type="submit" value="로그인">
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">아이디찾기</a>/<a href="#">비밀번호찾기</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    	<a href="/user/join">
+                        	<input width="100%" type="button" value="회원가입">
+                        </a>
+                    </td>   
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
