@@ -36,21 +36,23 @@
         </section>
             <!--오른쪽 사이드 -->
         <aside class="rigt_aside">
-            <div>지도</div>
-            <div id="map"></div> 
-            <div>주소</div>
-            <div class="store_add">대구 광역시 동구 검사동 944-5번지</div>
-            <div>가게정보</div>
-            <div class="store_story"></div>
-            <div>카테고리</div>
-            <div class="category"></div>
-            <div>전화번호</div>
-            <div class="store_ph"></div>
-            <div>영업시간</div>
-            <div class="business_time"></div>
+	        <c:forEach items="${requestScope.inf}" var="item">
+	            <div>지도</div>
+	            <div id="map"></div> 
+	            <div>주소</div>
+	            <div class="store_add">${item.store_address}</div>
+	            <div>가게정보</div>
+	            <div class="store_story"></div>
+	            <div>카테고리</div>
+	            <div class="category">${item.category}</div>
+	            <div>전화번호</div>
+	            <div class="store_ph">${item.store_call}</div>
+	            <div>영업시간</div>
+	            <div class="business_time">${item.business_time}</div>
+	        </c:forEach>
         </aside>
     </div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=51747b8eb8e6d4e36c45d01b5818194b&libraries=services,clusterer,drawing"></script>
-    <script type="text/javascript" src="kakao_map_api.js"></script>
+    <script type="text/javascript" src="/js/kakao_map_api.js"></script>
 </body>
 </html>

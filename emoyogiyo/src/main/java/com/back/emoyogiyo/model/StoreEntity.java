@@ -9,7 +9,7 @@ import lombok.Data;
 public class StoreEntity {
 	private int i_store;
 	private String store_nm;
-	private int store_call;
+	private String store_call;
 	private String store_address;
 	private String business_time;
 	private String r_dt;

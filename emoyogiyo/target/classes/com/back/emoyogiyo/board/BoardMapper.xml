@@ -9,4 +9,10 @@
 			ON A.i_store = B.i_store
 			WHERE A.i_store = #{i_store};
 	</select>
+	<select id="selSideInf" resultType="StoreDomain">
+		SELECT *
+			, (SELECT TRIM(GROUP_CONCAT(i_categorie, " ")) FROM e_categories WHERE i_store = #{i_store}) AS category 
+			FROM e_store 
+			WHERE i_store = #{i_store};
+	</select>
 </mapper> 

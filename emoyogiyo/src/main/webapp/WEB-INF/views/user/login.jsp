@@ -7,9 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login.css?ver=1">
 </head>
 <body>
+<span id="msg" data-id="${msg}"></span>
     <div class="login">
         <div class="title_login">로그인</div>
         <form action="/user/login" method="post">
@@ -44,5 +45,11 @@
             </table>
         </form>
     </div>
+<script>
+	var msg = document.querySelector('#msg').dataset.id
+	if(msg != ''){
+		alert(msg);
+	}	
+</script>
 </body>
 </html>

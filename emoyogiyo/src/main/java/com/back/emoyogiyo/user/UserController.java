@@ -32,11 +32,11 @@ public class UserController {
 	@PostMapping("/login")
 	public String loginProc(UserEntity param,Model model,HttpSession session) {
 		int result = service.userlogin(param,session);
-		String msg;
-				
+		String msg = "";
+		
 		switch (result) {
 		case 3:
-			return "board/list";
+			return "redirect:/board/main?i_store=1";
 		case 1:
 			msg ="아이디가 틀렸습니다.";	
 			break;
@@ -44,8 +44,8 @@ public class UserController {
 			msg ="비밀번호가 틀렸습니다.";
 			break;
 		}
-
-		return "null";
+		model.addAttribute("msg", msg);
+		return "/user/login";
 	}
 	
 	@GetMapping("/join")

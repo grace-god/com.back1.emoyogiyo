@@ -26,9 +26,9 @@
 	
 	<beans:bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<beans:property name="jdbcUrl" value="jdbc:mysql://localhost/emo?serverTimezone=UTC"/>
+		<beans:property name="jdbcUrl" value="jdbc:mysql://125.185.128.147/emo?serverTimezone=UTC"/>
 		<beans:property name="username" value="root"/>
-		<beans:property name="password" value="koreait2020"/>
+		<beans:property name="password" value="123123"/>
 	</beans:bean>
 	
 	<beans:bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
